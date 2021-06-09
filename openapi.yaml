@@ -5,10 +5,10 @@ paths:
   '/foo/{language}':
     post:
       operationId: somepath 
-      summary: Returns a single random  value of given value type.
+      summary: does something with a corpus
       parameters:
         - in: path
-          name: value_type
+          name: language
           schema:
             type: string
           required: true
@@ -18,14 +18,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Corpusonly'
+              $ref: #/components/schemas/Corpusonly
       responses:
         '200':
           description: A single value
           content:
             application/json:
               schema:
-                type: string
+                $ref: #/components/schemas/Base
 components:
     corpusonly:
             type: object
