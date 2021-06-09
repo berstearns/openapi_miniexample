@@ -27,9 +27,12 @@ paths:
               schema:
                 $ref: #/components/schemas/Base
 components:
-    corpusonly:
+    Corpusonly:
             type: object
             properties: 
                     Corpusonly: 
                           type: string
                           format: string
+     Base:
+            type: string
+            format: string
