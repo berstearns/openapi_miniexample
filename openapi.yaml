@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: some api
+paths:
+  '/foo/{language}':
+    post:
+      operationId: somepath 
+      summary: Returns a single random  value of given value type.
+      parameters:
+        - in: path
+          name: value_type
+          schema:
+            type: string
+          required: true
+          requestBody:
+      description: Optional description in *Markdown*
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Corpusonly'
+      responses:
+        '200':
+          description: A single value
+          content:
+            application/json:
+              schema:
+                type: string
+components:
+    corpusonly:
+            type: object
+            properties: 
+                    Corpusonly: 
+                          type: string
+                          format: string
